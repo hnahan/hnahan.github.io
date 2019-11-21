@@ -15,38 +15,31 @@
 		}
 	}
 		
-	
-	var numCircles = $('.circle').length;
-	var dist = 0;
-	$('.circle1').css({"position":"absolute","top":"0px"});
-	for(let j=1;j<numCircles;j++) {
-		dist += $('#exp'+(j+1)).offset().top - $('#exp'+j).offset().top;
-		$('.circle'+(j+1)).css({"position":"absolute","top":""+dist+"px"});
-	}
+	placeCircles();
 	
     function nvsAddAnimation() {
         animationObjectExp.each(function (index, element) {
             var $currentElement = $(element);
-                //,animationType = $currentElement.attr('nvs-animation-type');
+                
    			if (nvsOnScreen($currentElement)) {
 				$currentElement.removeClass('exp-hided');
-                $currentElement.addClass('exp-bounce-in');//'animated ' + animationType);
+                $currentElement.addClass('exp-bounce-in');
             }
         });
 		animationObjectSkills.each(function (index, element) {
             var $currentElement = $(element);
-                //,animationType = $currentElement.attr('nvs-animation-type');
+                
    			if (nvsOnScreen($currentElement)) {
 				$currentElement.removeClass('skill-hided');
-                $currentElement.addClass('skill-appear-in');//'animated ' + animationType);
+                $currentElement.addClass('skill-appear-in');
             }
         });
 		animationObjectTitle.each(function (index, element) {
             var $currentElement = $(element);
-                //,animationType = $currentElement.attr('nvs-animation-type');
+                
    			if (nvsOnScreen($currentElement)) {
 				$currentElement.removeClass('title-hided');
-                $currentElement.addClass('title-bounce-in');//'animated ' + animationType);
+                $currentElement.addClass('title-bounce-in');
             }
         });
     }
@@ -62,23 +55,7 @@
         return elementTopEdge + offset <= windowBottomEdge;
    }
     
-	function manageTopButton() {
-		if (nvsOnScreen($('#contact'))){
- 			$('#btn-top').fadeIn();
-		} 
-		else{
- 			$('#btn-top').fadeOut();
-		}
-	}
-	function manageDownButton() {
-		// nvsOnScreen($('#header-container') doesn't work
-		if (!nvsOnScreen($('#profile'))){
- 			$('#btn-to-profile').fadeIn();
-		} 
-		else{
- 			$('#btn-to-profile').fadeOut();
-		}
-	}
+	
 	//will run once the entire page (images or iframes), not just the DOM, is ready
 	$(window).on('load', function () {
 		$('.spinner-border').fadeOut('slow', function() {});
@@ -104,22 +81,7 @@
     });
     $(window).on('scroll', function (e) {
         nvsAddAnimation();
-		manageTopButton();
-		manageDownButton();
     });
-	
-	$('#btn-top').click(function(){
-		$("html, body").animate({scrollTop : 0},700);
-		return false;
-	});
-	if (nvsOnScreen($('#header-container'))){
- 		$('#btn-to-profile').fadeIn();
-	} 
-	$('#btn-to-profile').click(function(){
-		$('html, body').animate({
-			scrollTop: $("#profile").offset().top}, 500);
-		return false;
-	});
 	
 	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 		anchor.addEventListener('click', function (e) {

@@ -28,6 +28,7 @@ $primary-color: orange;
 	border: 1px solid cyan;
 	box-shadow: 0.3em 0.3em 1.8em rgba(0,0,0,0.4);
 	width:80%;
+    word-wrap: break-word;  
 }
 
 .exp-content::before {
@@ -41,11 +42,12 @@ $primary-color: orange;
     border-right: 7px solid $primary-color;
 }
 
+.exp-a {
+    line-height: 3em;
+}
 .enterprise {
     font-family: "Archivo Black";
-    padding-bottom: 0.4em;
     font-size: 2.7em;
-    line-height: (42/40)+em;
     color: #343434;
 	text-transform: uppercase;
 }

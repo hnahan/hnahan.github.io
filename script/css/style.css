@@ -85,7 +85,8 @@
   background: orange;
   border: 1px solid cyan;
   box-shadow: 0.3em 0.3em 1.8em rgba(0, 0, 0, 0.4);
-  width: 80%; }
+  width: 80%;
+  word-wrap: break-word; }
 
 .exp-content::before {
   content: "";
@@ -97,11 +98,12 @@
   border: 7px solid transparent;
   border-right: 7px solid orange; }
 
+.exp-a {
+  line-height: 3em; }
+
 .enterprise {
   font-family: "Archivo Black";
-  padding-bottom: 0.4em;
   font-size: 2.7em;
-  line-height: 1.05em;
   color: #343434;
   text-transform: uppercase; }
 
@@ -252,7 +254,7 @@ h2.title-section {
     -o-transform: translateX(0px);
     transform: translateX(0px); } }
 
-/* D:\logiciel\xampp\htdocs\cvGitHub\script>npm run scss */
+/* D:\path\script>npm run scss */
 body {
   background-color: white;
   font-family: "Arial Black", Helvetica, sans-serif;
