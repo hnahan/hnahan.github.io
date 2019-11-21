@@ -1,0 +1,43 @@
+
+.perspect {
+	perspective:500px;
+}
+ 
+
+/* scss: the '+' deletes the space added by the generator:*/
+@for $i from 0 through 4 {
+  .perspect i:nth-child( #{$i +1}) {
+	animation-delay: (500*$i)+ms;
+	}
+}
+
+.skill-hided {
+    visibility: hidden;
+}
+
+.skill-appear-in {
+    visibility: visible;
+	@include transform(skill-appear 2s);
+	animation-timing-function:ease;
+	animation-play-state:running; 		
+}
+
+@keyframes skill-appear
+{
+	0% {
+		visibility: visible;
+		opacity: 1;
+		@include keyframe( rotate(0deg)); /*translateZ(100px));*/
+	}
+	/*60% {
+		visibility: visible;
+		opacity: 0.6;
+		@include keyframe( translateZ(200px));
+	}*/
+	100% {
+		visibility: visible;
+		opacity: 1;
+		@include keyframe( rotate(90deg));
+	}
+
+}

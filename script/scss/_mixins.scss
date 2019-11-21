@@ -1,0 +1,29 @@
+
+@mixin perspective-orig($property) {
+	 
+    -webkit-perspective-origin: $property ;
+	-moz-perspective-origin: $property;
+	-o-perspective-origin:$property;
+	 perspective-origin:$property;
+	}
+	
+@mixin perspective($property) {
+	 
+    -webkit-perspective: $property ;
+	-moz-perspective: $property;
+	-o-perspective:$property;
+	 perspective:$property;
+	}
+
+@mixin transform($property) {
+	-webkit-animation: $property;
+    -moz-animation: $property ;
+    animation: $property ;
+	}
+@mixin keyframe($property) {
+	-webkit-transform: $property ;
+    -moz-transform: $property ;
+    -ms-transform: $property ;
+    -o-transform: $property ;
+    transform: $property ;
+	}

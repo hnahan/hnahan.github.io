@@ -1,0 +1,95 @@
+
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 50%;
+  background-color: #333;
+  position: static; }
+
+#exp-line::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    height: 100%;
+    width: 0.15em;
+    background: #000;
+}
+
+$primary-color: orange;
+.exp-content {
+	position:relative;/* relatif à la position absolue du cercle : n'a pas d'enfant donc aucun intérêt*/
+	margin-left:10%;
+	margin-bottom:1.5em;
+	padding-left:0.3em;
+	padding-bottom:0.3em;
+	background:$primary-color;
+	border: 1px solid cyan;
+	box-shadow: 0.3em 0.3em 1.8em rgba(0,0,0,0.4);
+	width:80%;
+}
+
+.exp-content::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    height: 0px;
+    width: 0px;
+    border: 7px solid transparent;
+    border-right: 7px solid $primary-color;
+}
+
+.enterprise {
+    font-family: "Archivo Black";
+    padding-bottom: 0.4em;
+    font-size: 2.7em;
+    line-height: (42/40)+em;
+    color: #343434;
+	text-transform: uppercase;
+}
+ 
+
+.exp-button {
+    border: 0;
+	cursor: default !important;
+    line-height: 1;
+    font-weight: 700;
+    border: 2px solid #9b9b9b;
+    background-color: #fff;
+    padding: 0.1em 0.1em 0.3em 0.3em;
+    color: #4c4c4c;
+    text-decoration: none;
+	border-radius:25%;
+}
+
+.exp-hided {
+    visibility: hidden;
+}
+
+
+.exp-bounce-in {
+    visibility: visible;
+	@include transform(exp-bounce 1s);
+	animation-timing-function:ease;
+	animation-play-state:running;
+}
+
+@keyframes exp-bounce
+{
+	0% {
+    opacity: 0;
+	@include keyframe(translateX(-20px));
+	}
+	/*@keyframes exp-bounce*/
+	60% {
+		opacity: 1;
+		@include keyframe(translateX(120px));
+	}
+	/*@keyframes exp-bounce*/
+	100% {
+		@include keyframe(translateX(0px));
+	}
+
+}

@@ -1,0 +1,48 @@
+
+.title-hided {
+    visibility: hidden;
+}
+
+
+h2.title-section {
+text-transform: uppercase;
+letter-spacing: 0.3em;	
+word-spacing:0.4em;
+margin-top:0.5em;
+text-align:center;
+font-size: 3.5vw;
+margin-bottom:4em;
+margin-top:4em;
+}
+
+#profile h2.title-section {
+	margin-top:1em;/*because of title-section that is at +4em*/
+}
+#footer {
+    margin-top:6em;	
+}
+	
+.title-bounce-in {
+	visibility: visible;
+	transition: transform 2s;
+	@include transform(title-bounce 2s);
+	animation-timing-function:ease;
+	animation-play-state:running;
+}
+.title-bounce-in:hover {
+  transform: rotate(360deg);
+}
+@keyframes title-bounce
+{
+	0% {
+    opacity: 0;
+	@include keyframe(translateX(120px));
+	}
+	60% {
+		opacity: 1;
+		@include keyframe(translateX(-20px));
+	}
+	100% {
+		@include keyframe(translateX(0px));
+	}
+}
