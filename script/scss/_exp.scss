@@ -19,7 +19,7 @@
 
 $primary-color: orange;
 .exp-content {
-	position:relative;/* relatif à la position absolue du cercle : n'a pas d'enfant donc aucun intérêt*/
+	position:relative;
 	margin-left:10%;
 	margin-bottom:1.5em;
 	padding-left:0.3em;
@@ -82,12 +82,10 @@ $primary-color: orange;
     opacity: 0;
 	@include keyframe(translateX(-20px));
 	}
-	/*@keyframes exp-bounce*/
 	60% {
 		opacity: 1;
 		@include keyframe(translateX(120px));
 	}
-	/*@keyframes exp-bounce*/
 	100% {
 		@include keyframe(translateX(0px));
 	}

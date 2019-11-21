@@ -11,12 +11,8 @@
 }   
  
 .slide{ 
-   position:absolute;
-   /* width:10em; 
-   height:10em; */ 
+   position:absolute; 
    margin: 5vh  auto 0vh auto; 
-    /* line-height: 10em; */
-  /* line-height: 35vh; */
    font-size:3.5vw; 
    color:white;
    text-align:center;
@@ -26,13 +22,7 @@
 	letter-spacing: 0.2em;
 	text-transform: uppercase;
 	width:100vw; 
-	/*  position:absolute; */
    margin:20vh auto 0vh auto; 
- 
-	 /* line-height: 15em; */
-  /* height: 10em; */
-  /* line-height: 18vh; */
-  /* height: 15vh; */
    font-size: 3.5vw;
    text-align:center;
 }

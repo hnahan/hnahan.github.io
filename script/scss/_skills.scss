@@ -27,13 +27,8 @@
 	0% {
 		visibility: visible;
 		opacity: 1;
-		@include keyframe( rotate(0deg)); /*translateZ(100px));*/
+		@include keyframe( rotate(0deg));
 	}
-	/*60% {
-		visibility: visible;
-		opacity: 0.6;
-		@include keyframe( translateZ(200px));
-	}*/
 	100% {
 		visibility: visible;
 		opacity: 1;

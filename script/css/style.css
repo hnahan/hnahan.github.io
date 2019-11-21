@@ -1,4 +1,3 @@
-@charset "UTF-8";
 #header-container {
   position: relative;
   width: 100%;
@@ -17,11 +16,7 @@
 
 .slide {
   position: absolute;
-  /* width:10em; 
-   height:10em; */
   margin: 5vh  auto 0vh auto;
-  /* line-height: 10em; */
-  /* line-height: 35vh; */
   font-size: 3.5vw;
   color: white;
   text-align: center; }
@@ -31,12 +26,7 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   width: 100vw;
-  /*  position:absolute; */
   margin: 20vh auto 0vh auto;
-  /* line-height: 15em; */
-  /* height: 10em; */
-  /* line-height: 18vh; */
-  /* height: 15vh; */
   font-size: 3.5vw;
   text-align: center; }
 
@@ -88,7 +78,6 @@
 
 .exp-content {
   position: relative;
-  /* relatif à la position absolue du cercle : n'a pas d'enfant donc aucun intérêt*/
   margin-left: 10%;
   margin-bottom: 1.5em;
   padding-left: 0.3em;
@@ -147,7 +136,6 @@
     -ms-transform: translateX(-20px);
     -o-transform: translateX(-20px);
     transform: translateX(-20px); }
-  /*@keyframes exp-bounce*/
   60% {
     opacity: 1;
     -webkit-transform: translateX(120px);
@@ -155,7 +143,6 @@
     -ms-transform: translateX(120px);
     -o-transform: translateX(120px);
     transform: translateX(120px); }
-  /*@keyframes exp-bounce*/
   100% {
     -webkit-transform: translateX(0px);
     -moz-transform: translateX(0px);
@@ -201,13 +188,7 @@
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    /*translateZ(100px));*/ }
-  /*60% {
-		visibility: visible;
-		opacity: 0.6;
-		@include keyframe( translateZ(200px));
-	}*/
+    transform: rotate(0deg); }
   100% {
     visibility: visible;
     opacity: 1;
@@ -301,8 +282,5 @@ section {
 .fa {
   color: orange; }
 
-.fa-angle-down {
-  color: white; }
-
-.fa-at, .fa-angle-up {
+.fa-at {
   color: black; }
